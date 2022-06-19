@@ -1,5 +1,6 @@
 import './style.css';
 import { getCurrentWeather } from './api/current';
+import { parseCurrentWeather } from './api/parseCurrent';
 // import { current } from './api/current';
 
-getCurrentWeather();
+parseCurrentWeather().then((data) => console.log(data.country));
