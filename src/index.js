@@ -42,7 +42,7 @@ const displayWeatherData = async () => {
     windMph,
   } = data;
 
-  const formattedTime = format(new Date(localTime), 'EEEE, H:m aaa');
+  const formattedTime = format(new Date(localTime), 'EEEE, H:mm aaa');
 
   weatherDetailsContainer.style.display = 'flex';
 
