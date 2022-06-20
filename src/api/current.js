@@ -1,5 +1,5 @@
 const API_KEY = '4aca6f2bce164fffb4741737221906';
-const BASE_URL = 'http://api.weatherapi.com/v1';
+const BASE_URL = 'https://api.weatherapi.com/v1';
 const searchQuery = document.querySelector('#search');
 
 const getCurrentWeather = async () => {
