@@ -7,6 +7,61 @@
     <title>Weather app</title>
   </head>
   <body>
-    Hello World
+    <main class="main">
+      <header class="header">
+        <form>
+          <input type="search" name="search" id="search" />
+        </form>
+      </header>
+      <div class="weather-info">
+        <div class="main-info">
+          <p class="time">
+            <time class="date-time">Sunday, 10:30 pm</time>
+          </p>
+          <p class="location">Mexico City, Mexico</p>
+          <div class="weather">
+            <div class="temperature">22</div>
+            <div class="feels-like">20</div>
+            <img
+              src="./icons/weather/64x64/day/119.png"
+              alt="Current weather icon"
+              class="weather-icon"
+            />
+          </div>
+          <div class="condition">Partly Cloudy</div>
+        </div>
+        <div class="weather-details-container">
+          <div class="weather-details">
+            <i class="wi wi-humidity"></i>
+            <div class="detail-type-info">
+              <div class="detail-type">Humidity</div>
+              <div class="detail-type-info-text">77%</div>
+            </div>
+          </div>
+          <div class="weather-details">
+            <i class="wi wi-hot"></i>
+            <div class="detail-type-info">
+              <div class="detail-type">UV Index</div>
+              <div class="detail-type-info-text">77%</div>
+            </div>
+          </div>
+          <div class="weather-details">
+            <i class="wi wi-strong-wind"></i>
+            <div class="detail-type-info">
+              <div class="detail-type">WindSpeed</div>
+              <div class="detail-type-info-text">77%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <small>
+        Powered by
+        <a href="https://www.weatherapi.com/" title="Free Weather API">
+          WeatherAPI.com
+        </a>
+      </small>
+    </footer>
   </body>
 </html>
