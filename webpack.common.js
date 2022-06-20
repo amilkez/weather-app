@@ -23,13 +23,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpeg|jpg|gif)$/i,
         type: 'asset/resource',
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'imgs',
-          },
-        },
       },
       {
         test: /\.html$/,

@@ -52,7 +52,7 @@ body {
 #search {
   border-radius: 20px;
   border: none;
-  padding: 0.4rem 1rem 0.4rem 2rem;
+  padding: 0.4rem 2rem 0.4rem 2rem;
   outline: none;
   -webkit-appearance: textfield;
 }
@@ -83,6 +83,7 @@ body {
 
 .time {
   margin-top: 2rem;
+  font-size: 1.5rem;
 }
 
 .location {
@@ -96,7 +97,7 @@ body {
   grid-template-areas:
     'temperature icon'
     'feels feels'
-    'condition condition';
+    'condition .';
   gap: 2rem 0;
 }
 
@@ -107,6 +108,8 @@ body {
 .temperature {
   grid-area: temperature;
   font-size: 6rem;
+  text-align: left;
+  margin-left: 4rem;
 }
 
 .weather-icon {
@@ -115,7 +118,16 @@ body {
 
 .feels-like {
   grid-area: feels;
-  font-size: 2.5rem;
+  margin-left: 4rem;
+}
+
+.feels-like-text {
+  font-size: 0.8rem;
+}
+
+.feels-like-temp {
+  margin-left: 2rem;
+  font-size: 2rem;
 }
 
 .condition {
@@ -127,7 +139,7 @@ body {
   margin-top: 2rem;
   justify-self: end;
   align-self: stretch;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 2rem;
   margin-right: 3rem;
