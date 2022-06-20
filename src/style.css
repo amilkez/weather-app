@@ -1,3 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  color: blueviolet;
+  height: 100vh;
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-weight: 800;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.bg-wallpaper {
+  z-index: -2;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./backgrounds/NJ95FSA.gif);
+  background-size: cover;
+  filter: blur(5px) brightness(50%);
+  transform: scale(1.1);
+}
+
+.main {
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 1fr;
+  grid-template-areas:
+    'search '
+    'body ';
+}
+
+.header {
+  height: 10vh;
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search {
+  border-radius: 20px;
+  border: none;
+  padding: 0.4rem 1rem 0.4rem 2rem;
+  outline: none;
+  -webkit-appearance: textfield;
+}
+
+#search:active,
+#search:focus {
+  border: 2px solid hsla(0, 0%, 0%, 0.4);
+}
+
+.weather-info {
+  height: 100%;
+  grid-area: body;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+.time,
+.location {
+  font-size: 2rem;
+}
+
+.time {
+  margin-top: 2rem;
+}
+
+.location {
+  margin-bottom: 2rem;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 3rem 1rem;
+  grid-template-areas:
+    'temperature icon'
+    'feels feels'
+    'condition condition';
+  gap: 2rem 0;
+}
+
+.weather-icon {
+  height: 100%;
+}
+
+.temperature {
+  grid-area: temperature;
+  font-size: 6rem;
+}
+
+.weather-icon {
+  grid-area: icon;
+}
+
+.feels-like {
+  grid-area: feels;
+  font-size: 2.5rem;
+}
+
+.condition {
+  grid-area: condition;
+  font-size: 4rem;
+}
+
+.weather-details-container {
+  margin-top: 2rem;
+  justify-self: end;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.weather-details-container i {
+  margin-right: 1rem;
+
+  place-self: center;
+  font-size: 2rem;
+}
+
+.detail-type-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.detail-type {
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  height: 5vh;
+  margin: 0 3rem;
+  text-align: end;
+}
+
+.footer a {
+  color: white;
 }
